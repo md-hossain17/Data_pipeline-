@@ -2,7 +2,7 @@ from dataclasses import dataclass
 
 @dataclass
 class Item:
-    separator:","
+    separator:" "
     name: str
     value: float
     catagory: str
