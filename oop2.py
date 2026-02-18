@@ -1,25 +1,18 @@
-import numpy as np
+from SodaBottle import SodaBottle
 
-# Explicit COLUMN vector: shape (3, 1)
-u = np.array ([[5],
-                [3],
-                [-4]])
 
-v = np.array ([[-1],
-              [5],
-              [2]],)
-w = np.array ([[3],
-              [-1],
-              [-2]],)
-print(5*u - 2*v)
-print()
-print(-2*u + 4*v - 3*w)
-#row vector: shape (1, 3)
-a = np.array ([2, -5, 6])
-b = np.array ([8, 2, -3])
-print(np.dot(a,b))
-print()
-c = np.array ([4, 2, -3, 5, -1])
-d = np.array ([2, 6, -1, -4, 8])
-print(np.dot(c,d))
-print()
+class Main:
+    def __init__(self) -> None:
+        print("Program starting")
+        bottle_cola = SodaBottle("coca cola")
+        print("Bottle brand is:", bottle_cola.brand)
+        print(bottle_cola)
+        print(bottle_cola.brand)
+        bottle_cola.drink()
+        bottle_cola.openBottle()
+        bottle_cola.drink()
+        print("close the program")
+        return None
+
+if __name__ == "__main__":
+    app = Main()
